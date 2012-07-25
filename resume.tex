@@ -1,0 +1,259 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+% (c) 2012 Reid Vandeweile <reidmv@gmail.com>
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
+
+\documentclass[letterpaper,11pt]{article}
+%-----------------------------------------------------------
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=mygreylink     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+%-----------------------------------------------------------
+
+%Custom commands
+
+\newcommand{\resitem}[1]{
+  \item #1 \vspace{-2pt}
+}
+
+\newcommand{\resheading}[1]{
+  {
+    \large \colorbox{mygrey}{
+      \begin{minipage}{\textwidth}{
+        \textbf{#1 \vphantom{p\^{E}}}
+      }\end{minipage}
+    }
+  }
+}
+
+\newcommand{\ressubheading}[4]{
+  \begin{tabular*}{6.75 in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\mywebheader}{
+  \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+    \textbf{\LARGE \textcolor{mygreylink}
+      {Reid M Vandewiele}
+    }
+    & \href{mailto:reidmv@gmail.com}{reidmv@gmail.com}\\
+    {\footnotesize \texttt
+      {783 NW Naito Parkway \#530, Portland OR 97209}
+    }
+    & \textcolor{mygreylink}{{(503) 946-6126}}\\
+  \end{tabular*}\\
+  \vspace{0.1in}
+}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Qualifications}
+  \begin{description}
+    \item[Puppet:] { \footnotesize
+      Two years experience using and writing puppet code in a heterogeneous
+      computing environment. Adapted a site's worth of pre-module practices to
+      then-current practices, and continued to adapt codebase to reflect
+      evolving best-practices. Developed and implemented the concept of 
+      ``Dynamic Git-Branch Puppet Environments'' as popularized by Hunter
+      Haugen while working at Portland State University.
+    }
+    \item[Learning:] { \footnotesize
+      Strong personal belief that the ability to learn new skills, styles
+      and methodologies is as important as the sum of a current skillset --
+      this translates to a practiced ability to assimilate new ideas and a
+      can-do attitude towards evolving workplace scenarios.
+    }
+    \item[Community:] { \footnotesize
+      Community presence and engagement on {\sc irc} and on {\sc g}it{\sc h}ub using the
+      handles ``reidmv'' and ``marut''. Contributions to the {\sc p}uppet community
+      include published modules on the ``pdxcat'' {\sc g}it{\sc h}ub organization --
+      providing custom types, providers, functions and application automation
+      -- as well as patches and commentary submitted towards {\sc p}uppet {\sc l}abs
+      published modules.
+    }
+    \item[Communication:] { \footnotesize
+      Able to convey new ideas and concepts verbally and in writing using
+      analogy, description and improvisation; engaging, listening and adapting
+      as necessary to get the job done.
+    }
+  \end{description} % End Skills list
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+  \begin{description}
+  
+    \item
+      \ressubheading{
+        Portland State University Computer Action Team
+      } {
+        Portland, OR
+      } {
+        Lead Unix System Administrator
+      } {
+        Aug. 2010 -- Present
+      } { \footnotesize
+        \begin{itemize}
+          \resitem{
+            Managed a mixed paid/volunteer team of between 4-15 people
+          }
+          \resitem{
+            Responsible for maintaining 200 workstations and servers running
+            {\sc s}olaris, {\sc u}buntu, {\sc rhel}, {\sc c}ent{\sc os}, or
+            {\sc n}exenta{\sc s}tor (primarily {\sc u}buntu)
+          }
+          \resitem{
+            Provided and deployed a variety of infrastructure services
+            and glue including: {\sc nfs}, autofs, amanda network backup, {\sc ldap}, ganeti,
+            kvm, pam, apache, nginx, postgresql
+          }
+          \resitem{
+            Built, found, evaluated and used {\sc p}uppet modules to automate system
+            configuration across a heterogeneous environment
+          }
+          \resitem{
+            Installed and managed a variety of simple and complex softwares for
+            researchers and staff on-demand
+          }
+          \resitem{
+            Maintained, extended, and on occasion rebuilt parts of a suite of
+            in-house account management softwares written in perl, python, ruby,
+            php, and various shell scripting languages
+          }
+        \end{itemize}
+      }
+
+    \item
+      \ressubheading{
+        Portland State University Computer Action Team
+      } {
+        Portland, OR
+      } {
+       ``TopDog'' Helpdesk Overseer
+      } {
+        Sep. 2009 -- Aug. 2010
+      } { \footnotesize
+        \begin{itemize}
+          \resitem{
+            Managed group of 40+ volunteers responsible for {\sc it} troubleshooting,
+            customer-service and support
+          }
+          \resitem{
+            Scheduled "braindump" training sessions and presentations for helpdesk
+            volunteers
+          }
+          \resitem{
+            Performed {\sc u}nix/{\sc l}inux system administration at a junior level
+          }
+        \end{itemize}
+      }
+      
+    \item
+      \ressubheading{
+        Portland State University Computer Science Department
+      } {
+        Portland, OR
+      } {
+        Computer Science Tutor
+      } {
+        Apr. 2009 -- Aug. 2010
+      } { \footnotesize
+        \begin{itemize}
+          \resitem{
+            Tutored undergraduate computer science students in C++ and programming
+            concepts (other languages used as necessary) focusing on entry-level
+            through 300-level courses
+          }
+          \resitem{
+            Promoted to {\sc t}utor {\sc c}oordinator in April 2010
+          }
+          \resitem{
+            Hired, scheduled and managed a team of 4-6 student workers
+          }
+        \end{itemize}
+      }
+        
+  \end{description} % End Experience list
+%%%%%%%%%%%%%%%%%%%%%%
+  
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+  \begin{description}
+    \item
+      \ressubheading{
+        Portland State University
+      } {
+        Portland, OR
+      } {
+        \href{http://www.pdx.edu/computerscience}{Bachelor of Science in Computer Science}
+      } {
+        Sep. 2008 -- Aug. 2010
+      }
+    \item
+      \ressubheading{
+        Pacific University
+      } {
+        Forest Grove, OR
+      } {
+        \href{http://www.pacificu.edu/as/politics}{Bachelor of Arts in Politics \& Government}
+      } {
+        Aug. 2006 -- May. 2008
+      }
+    \item
+      \ressubheading{
+        Clackamas Community College
+      } {
+        Oregon City, OR
+      } {
+        \href{http://www.clackamas.edu/index.aspx}{AAOT General Studies}
+      } {
+        Jun. 2003 -- Jun. 2006
+      }
+  \end{description} % End Education list
+%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
